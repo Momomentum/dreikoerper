@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Fixedsys Excelsior";
+  src: url("fonts/FSEX300.ttf") format("truetype");
+}
+
+body {
+    background-color: black;
+    font-family: "Fixedsys", "Fixedsys Excelsior", Consolas, "Courier New", monospace;
+    position: relative;
+}
+
+.dk-content {
+    margin: auto;
+    width: 70%;
+    /* border: 1px solid white; */
+    color: white;
+}
+
+.dk-spacer {
+    height: 10px;
+}
+
+.dk-header {
+    margin: auto;
+    height: 500px;
+    min-width: 800px;
+    background: url("./assets/header.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+    box-shadow: 0 0 20px 20px black inset;
+}
+
+.dk-textbox {
+    margin: auto;
+    width: 700px;
+    padding: 30px;
+    border: 1px solid #b10002;
+}
+
+
+.dk-footer {
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    radius: 5px;
+    padding: 10px;
+    transform: translate(-50%, 0);
+    bottom: 10px;
+    color: white;
+    background-color: #b1000240;
+}
+
+.bubble {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #b10002;
+}
