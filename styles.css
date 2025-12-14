@@ -3,10 +3,11 @@
   src: url("fonts/FSEX300.ttf") format("truetype");
 }
 
-body {
+html, body {
     background-color: black;
     font-family: "Fixedsys", "Fixedsys Excelsior", Consolas, "Courier New", monospace;
     position: relative;
+    height: 100%;
 }
 
 .dk-content {
@@ -14,6 +15,18 @@ body {
     width: 70%;
     /* border: 1px solid white; */
     color: white;
+    padding-bottom: 60px; /* still needed */
+}
+
+.footer-mask {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60px; /* same as footer height */
+    background: black;
+    pointer-events: none;
+    z-index: 10;
 }
 
 .dk-spacer {
@@ -38,25 +51,39 @@ body {
     border: 1px solid #b10002;
 }
 
-
-.dk-footer {
-    text-align: center;
-    position: fixed;
-    left: 50%;
-    radius: 5px;
-    padding: 10px;
-    transform: translate(-50%, 0);
-    bottom: 10px;
+a {
     color: white;
-    background-color: #b1000240;
 }
 
-.bubble {
-    position: absolute;
-    top:0;
-    left:0;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #b10002;
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    font-weight: 900;
+    color: white;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.dk-footer {
+    position: fixed;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    padding: 10px 30px;
+    background: rgba(177, 0, 2, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: white;
+    font-size: 1.2em;
+    border-radius: 5px;
+    z-index: 20;
 }
