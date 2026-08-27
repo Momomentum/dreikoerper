@@ -1,3 +1,7 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 @font-face {
   font-family: "Fixedsys Excelsior";
   src: url("fonts/FSEX300.ttf") format("truetype");
@@ -8,6 +12,7 @@ html, body {
     font-family: "Fixedsys", "Fixedsys Excelsior", Consolas, "Courier New", monospace;
     position: relative;
     height: 100%;
+    text-align: center;
 }
 
 .dk-content {
@@ -15,27 +20,20 @@ html, body {
     width: 70%;
     /* border: 1px solid white; */
     color: white;
-    padding-bottom: 60px; /* still needed */
-}
-
-.footer-mask {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 60px; /* same as footer height */
-    background: black;
-    pointer-events: none;
-    z-index: 10;
+    padding-bottom: 50px; /* still needed */
+    text-align: left;
 }
 
 .dk-spacer {
     height: 10px;
 }
 
+.dk-spacer-large {
+    height: 50px;
+}
 .dk-header {
     margin: auto;
-    height: 500px;
+    height: 550px;
     min-width: 800px;
     background: url("./assets/header.jpg");
     background-repeat: no-repeat;
@@ -46,9 +44,47 @@ html, body {
 
 .dk-textbox {
     margin: auto;
-    width: 700px;
+    width: 800px;
+    text-align: center;
     padding: 30px;
     border: 1px solid #b10002;
+}
+
+.dk-title {
+    margin: auto;
+    width: 800px;
+    color: white;
+    text-align: left;
+    font-size: 1.2em;
+    padding-bottom: 8px;
+    padding-left: 40px;
+}
+
+.dk-video {
+    margin: auto;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    aspect-ratio: 16 / 9; 
+}
+
+.dk-video iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.dk-footer {
+    margin: auto;
+    display: inline-block;
+    padding: 10px 30px;
+    background: rgba(177, 0, 2, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: white;
+    font-size: 1.2em;
+    border-radius: 5px;
+    text-align: center;
 }
 
 a {
@@ -71,19 +107,4 @@ a:hover {
 
 a:active {
     text-decoration: none;
-}
-
-.dk-footer {
-    position: fixed;
-    left: 50%;
-    bottom: 10px;
-    transform: translateX(-50%);
-    padding: 10px 30px;
-    background: rgba(177, 0, 2, 0.45);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    color: white;
-    font-size: 1.2em;
-    border-radius: 5px;
-    z-index: 20;
 }
